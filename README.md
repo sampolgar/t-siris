@@ -4,6 +4,10 @@ I built a Threshold-Issued, Sybil-Resistant Privacy Preserving Identity System f
 
 For Sybil Resistance, I created a [nullifier scheme](https://github.com/sampolgar/nullifiers) similar in thought to z-cash and using the Dodis-Yampolskiy VRF flavor from UTT but mine is faster as shown in the link and soon to be paper.
 
+### Acknowledgements
+
+Thanks to [Lovesh Harchandani](https://github.com/lovesh), as I learned many Anonymous Credentials from his work at [Dock](https://github.com/docknetwork/crypto)
+
 ## Technical Implementation
 
 The threshold construction is based on an updated version of Coconut as described in [UTT](https://eprint.iacr.org/2022/452) and Nym's [2022 security analysis](https://eprint.iacr.org/2022/011.pdf). The performance comparison between our implementation and Nym's is shown below:
@@ -37,3 +41,29 @@ Our construction achieves substantial speedups over tACT, with up to 44× faster
 
 ![alt text](threshold_identity_system.png)
 ![alt text](threshold_identity_system2.png)
+
+## Installation
+
+```sh
+# Clone the repository
+git clone https://github.com/sampolgar/t_siris.git
+cd t_siris
+
+# Bench (assumed you have rust installed)
+cargo bench
+```
+
+## Citation
+
+If you use MIMC-ABC in your research, please cite it as:
+
+```
+@software{t_siris,
+  author = {Polgar, Sam},
+  title = {T-SIRIS: Threshold Issued, Sybil Resistant, Privacy-Preserving Identity System},
+  url = {https://github.com/sampolgar/t_siris},
+  year = {2025}
+}
+```
+
+Originally from my project `https://github.com/sampolgar/anonymous-credentials/tree/main/ps_utt_ts`
