@@ -55,7 +55,7 @@ cargo bench
 
 ## Citation
 
-If you use MIMC-ABC in your research, please cite it as:
+If you use T-SIRIS in your research, please cite it as:
 
 ```
 @software{t_siris,
